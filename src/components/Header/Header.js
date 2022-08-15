@@ -1,56 +1,48 @@
 import React from "react";
 import "./Header.scss";
 import { Link } from "react-router-dom";
+import {
+	Navbar,
+	Nav,
+	Form,
+	Button,
+	FormControl,
+	Container,
+} from "react-bootstrap";
 
 const Header = () => {
 	return (
-		<nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-			<div className="container-fluid">
-				<Link to="/" className="navbar-brand">
+		<Navbar bg="dark" variant="dark" expand="lg">
+			<Container fluid>
+				<Navbar.Brand as={Link} to={"/"}>
 					MOVstrem
-				</Link>
-				<button
-					className="navbar-toggler"
-					type="button"
-					data-mdb-toggle="collapse"
-					data-mdb-target="#navbarTogglerDemo02"
-					aria-controls="navbarTogglerDemo02"
-					aria-expanded="false"
-					aria-label="Toggle navigation"
-				>
-					<i className="fas fa-bars"></i>
-				</button>
-				<div className="collapse navbar-collapse" id="navbarTogglerDemo02">
-					<ul className="navbar-nav me-auto mb-2 mb-lg-0">
-						<li className="nav-item">
-							<Link to="/" className="nav-link">
-								MovieApp
-							</Link>
-						</li>
-						<li className="nav-item">
-							<a className="nav-link" href="#">
-								Favorites
-							</a>
-						</li>
-					</ul>
-					<form className="d-flex input-group w-auto">
-						<input
+				</Navbar.Brand>
+				<Navbar.Toggle aria-controls="navbarScroll" />
+				<Navbar.Collapse id="navbarScroll">
+					<Nav
+						className="me-auto my-2 my-lg-0"
+						style={{ maxHeight: "100px" }}
+						navbarScroll
+					>
+						<Nav.Link as={Link} to={"/"}>
+							Home
+						</Nav.Link>
+						<Nav.Link as={Link} to="/favorites">
+							Favorites
+						</Nav.Link>
+					</Nav>
+					<Form className="d-flex">
+						<Form.Control
 							type="search"
-							className="form-control"
 							placeholder="Search Movies or TV Shows"
+							className="me-2"
 							aria-label="Search"
 						/>
-						<button
-							className="btn btn-outline-info"
-							type="button"
-							data-mdb-ripple-color="dark"
-						>
-							Search
-						</button>
-					</form>
-				</div>
-			</div>
-		</nav>
+						<Button variant="outline-success">Search</Button>
+					</Form>
+				</Navbar.Collapse>
+			</Container>
+		</Navbar>
 	);
 };
 
