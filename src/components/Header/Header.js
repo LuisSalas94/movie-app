@@ -17,7 +17,7 @@ const Header = () => {
 		<Navbar bg="myNavbar" variant="dark" expand="lg">
 			<Container fluid>
 				<Navbar.Brand as={Link} to={"/"}>
-					M<FontAwesomeIcon icon={faPlayCircle} />
+					M<FontAwesomeIcon icon={faPlayCircle} className="circle-button" />
 					Vstrem
 				</Navbar.Brand>
 				<Navbar.Toggle aria-controls="navbarScroll" />

@@ -1,18 +1,34 @@
 import React from "react";
 import "./Hero.scss";
-import mask2 from "../../assets/mask2.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faMedium } from "@fortawesome/free-brands-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
 	return (
-		<div className="hero-movie">
-			<div className="movie-left">
+		<>
+			<div className="hero-movie">
+				<span className="hero-welcome">
+					Welcome
+					<div className="hero-line"></div>
+				</span>
 				<div className="hero-movie-title">
 					Let's Make Your <br /> Own Cinema
 				</div>
 				<div className="hero-movie-content">
 					<p>
-						You can still enjoy the latest movies and shows <br /> online and at
-						a lower price
+						MOVstrem has an extremely impressive film catalog for you to choose
+						from. If you’re looking to watch an obscure film title—maybe a movie
+						from decades prior—MOVstrem is the best choice. You also will have
+						the ability to rent the most recently released films and recent home
+						premieres.
+					</p>
+					<p>
+						If there’s a movie currently only playing in theaters that you’re
+						dying to see, MOVstrem can even help you view show times and
+						purchase tickets for in person viewing.
 					</p>
 				</div>
 				<div className="hero-movie-buttons">
@@ -20,10 +36,30 @@ const Hero = () => {
 					<button className="movie-btn left">Get Started</button>
 				</div>
 			</div>
-			<div className="movie-right">
-				{/* <img src={mask2} alt="batman img" /> */}
+			<div className="side-icons">
+				<a
+					href="https://www.linkedin.com/in/luisfernandosalasgave/"
+					target={"_blank"}
+					rel="noreferrer"
+				>
+					<FontAwesomeIcon icon={faLinkedin} className="icon" />
+				</a>
+				<a
+					href="https://medium.com/@luisfernandosalasg"
+					target={"_blank"}
+					rel="noreferrer"
+				>
+					<FontAwesomeIcon icon={faMedium} className="icon" />
+				</a>
+				<a
+					href="https://github.com/LuisSalas94"
+					target={"_blank"}
+					rel="noreferrer"
+				>
+					<FontAwesomeIcon icon={faGithub} className="icon" />
+				</a>
 			</div>
-		</div>
+		</>
 	);
 };
 
