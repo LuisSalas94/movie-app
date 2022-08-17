@@ -51,6 +51,7 @@
      .hero-movie-buttons .left{
         margin-left: 0!important;
         margin-top: 1rem!important;
+        
       }
 }
 
@@ -69,10 +70,27 @@
       display: none;
     }
   }
+
+  .hero-movie-content p br{
+    display: none;
+  }
+
 }
 
 @media screen and (max-width:520px){
+  .hero-movie{
+    padding: 0 2%;
+  }
+
   .movie-right img{
     display: none;
   }
+
+  .hero-movie-title{
+    font-size: 4rem!important;
+    br{
+    display: none!important;
+    }
+  }
+
 }

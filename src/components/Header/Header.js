@@ -12,7 +12,7 @@ import {
 
 const Header = () => {
 	return (
-		<Navbar bg="dark" variant="dark" expand="lg">
+		<Navbar bg="myNavbar" variant="dark" expand="lg">
 			<Container fluid>
 				<Navbar.Brand as={Link} to={"/"}>
 					MOVstrem
@@ -34,11 +34,11 @@ const Header = () => {
 					<Form className="d-flex">
 						<Form.Control
 							type="search"
-							placeholder="Search Movies or TV Shows"
+							placeholder="Movies or TV Shows"
 							className="me-2"
 							aria-label="Search"
 						/>
-						<Button variant="outline-success">Search</Button>
+						<Button variant="outline-secondary">Search</Button>
 					</Form>
 				</Navbar.Collapse>
 			</Container>

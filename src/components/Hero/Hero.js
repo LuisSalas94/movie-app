@@ -1,6 +1,6 @@
 import React from "react";
 import "./Hero.scss";
-import thor from "../../assets/thor-removebg-preview(1).png";
+import mask2 from "../../assets/mask2.png";
 
 const Hero = () => {
 	return (
@@ -12,7 +12,7 @@ const Hero = () => {
 				<div className="hero-movie-content">
 					<p>
 						You can still enjoy the latest movies and shows <br /> online and at
-						a lower price.
+						a lower price
 					</p>
 				</div>
 				<div className="hero-movie-buttons">
@@ -21,7 +21,7 @@ const Hero = () => {
 				</div>
 			</div>
 			<div className="movie-right">
-				<img src={thor} alt="batman img" />
+				<img src={mask2} alt="batman img" />
 			</div>
 		</div>
 	);
