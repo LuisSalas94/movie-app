@@ -6,10 +6,22 @@ import movieAPI from "../../common/apis/movieAPI";
 //Movies Thunk Function
 export const fetchAsyncMovies = createAsyncThunk(
 	"movies/fetchAsyncMovies",
-	async () => {
-		const term = "Star Wars";
+	async (term) => {
+		//const term = "Star Wars";
 		const response = await movieAPI.get(
 			`?apiKey=${APIKEY}&s=${term}&type=movie`
+		);
+		return response.data;
+	}
+);
+
+//Shows Thunk function
+export const fetchAsyncShows = createAsyncThunk(
+	"movies/fetchAsyncShows",
+	async (term) => {
+		//const movieText = "Stranger Things";
+		const response = await movieAPI.get(
+			`?apiKey=${APIKEY}&s=${term}&type=series`
 		);
 		return response.data;
 	}
@@ -18,6 +30,7 @@ export const fetchAsyncMovies = createAsyncThunk(
 //Initial State
 const initialState = {
 	movies: {},
+	shows: {},
 };
 
 //Movie Slice
@@ -29,6 +42,9 @@ const movieSlice = createSlice({
 		[fetchAsyncMovies.fulfilled]: (state, { payload }) => {
 			console.log("Successfully fetched movies");
 			return { ...state, movies: payload };
+		},
+		[fetchAsyncShows.fulfilled]: (state, { payload }) => {
+			return { ...state, shows: payload };
 		},
 	},
 });
