@@ -1,0 +1,17 @@
+.movie-list{
+  h2{
+    margin-bottom: 10px;
+    font-weight: 400;
+    color: aliceblue;
+  }
+
+  .movie-container {
+   display: flex;
+   align-items: center;
+   flex-wrap: wrap;
+   padding: 60px 0;
+   justify-content: center;
+  
+    }
+}
+

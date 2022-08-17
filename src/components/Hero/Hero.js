@@ -21,7 +21,7 @@ const Hero = () => {
 				</div>
 			</div>
 			<div className="movie-right">
-				<img src={mask2} alt="batman img" />
+				{/* <img src={mask2} alt="batman img" /> */}
 			</div>
 		</div>
 	);
