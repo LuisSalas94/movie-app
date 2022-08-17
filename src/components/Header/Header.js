@@ -9,13 +9,16 @@ import {
 	FormControl,
 	Container,
 } from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlayCircle } from "@fortawesome/free-solid-svg-icons";
 
 const Header = () => {
 	return (
 		<Navbar bg="myNavbar" variant="dark" expand="lg">
 			<Container fluid>
 				<Navbar.Brand as={Link} to={"/"}>
-					MOVstrem
+					M<FontAwesomeIcon icon={faPlayCircle} />
+					Vstrem
 				</Navbar.Brand>
 				<Navbar.Toggle aria-controls="navbarScroll" />
 				<Navbar.Collapse id="navbarScroll">

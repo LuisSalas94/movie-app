@@ -4,12 +4,12 @@ import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { faThumbsUp } from "@fortawesome/free-solid-svg-icons";
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
 import { faSave } from "@fortawesome/free-solid-svg-icons";
 import { faBookmark } from "@fortawesome/free-solid-svg-icons";
 import { faShareAlt } from "@fortawesome/free-solid-svg-icons";
+import { faComment } from "@fortawesome/free-solid-svg-icons";
 
 const MovieCard = (props) => {
 	const { data } = props;
@@ -42,7 +42,7 @@ const MovieCard = (props) => {
 							{randomLikes}
 						</span>
 						<span>
-							<FontAwesomeIcon icon={faHeart} className="random-button" />
+							<FontAwesomeIcon icon={faComment} className="random-button" />
 							{randomComments}
 						</span>
 					</div>
