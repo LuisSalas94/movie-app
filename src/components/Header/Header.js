@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
 import "./Header.scss";
 import { Link, Outlet } from "react-router-dom";
 import {
@@ -9,12 +10,30 @@ import {
 	FormControl,
 	Container,
 } from "react-bootstrap";
+import {
+	fetchAsyncMovies,
+	fetchAsyncShows,
+} from "../../features/movies/movieSlice";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlayCircle } from "@fortawesome/free-solid-svg-icons";
 
 const Header = () => {
+	const dispatch = useDispatch();
+	const [term, setTerm] = useState("");
+	const fetchMoviesOrShow = (e) => {
+		e.preventDefault();
+		dispatch(fetchAsyncMovies(term));
+		dispatch(fetchAsyncShows(term));
+		setTerm("");
+	};
+
 	return (
-		<Navbar bg="myNavbar" variant="dark" expand="lg">
+		<Navbar
+			bg="myNavbar"
+			variant="dark"
+			expand="lg"
+			onSubmit={fetchMoviesOrShow}
+		>
 			<Container fluid>
 				<Navbar.Brand as={Link} to={"/"}>
 					M<FontAwesomeIcon icon={faPlayCircle} className="circle-button" />
@@ -44,8 +63,12 @@ const Header = () => {
 							placeholder="Movies or TV Shows"
 							className="me-2"
 							aria-label="Search"
+							value={term}
+							onChange={(e) => setTerm(e.target.value)}
 						/>
-						<Button variant="outline-secondary">Search</Button>
+						<Button variant="outline-secondary" onClick={fetchMoviesOrShow}>
+							Search
+						</Button>
 					</Form>
 				</Navbar.Collapse>
 			</Container>
