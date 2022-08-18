@@ -1,0 +1,26 @@
+.pricing {
+	padding-top: 4rem;
+	display: flex;
+	text-align: center;
+	flex-direction: column;
+	.pricing-header {
+		h1 {
+			text-transform: capitalize;
+			font-size: 3rem;
+		}
+		p {
+			padding: 2rem 0;
+			font-size: 1.2rem;
+		}
+		h1,
+		p {
+			color: aliceblue;
+		}
+	}
+	.pricing-content {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+}

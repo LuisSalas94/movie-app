@@ -1,6 +1,6 @@
 import React from "react";
 import "./Header.scss";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import {
 	Navbar,
 	Nav,
@@ -33,7 +33,11 @@ const Header = () => {
 						<Nav.Link as={Link} to="/favorites">
 							Favorites
 						</Nav.Link>
+						<Nav.Link as={Link} to="/pricing">
+							Pricing
+						</Nav.Link>
 					</Nav>
+					<Outlet />
 					<Form className="d-flex">
 						<Form.Control
 							type="search"

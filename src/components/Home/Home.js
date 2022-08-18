@@ -5,19 +5,14 @@ import { fetchAsyncMovies } from "../../features/movies/movieSlice";
 import { fetchAsyncShows } from "../../features/movies/movieSlice";
 import Hero from "../Hero/Hero";
 import MovieListing from "../MovieListing/MovieListing";
+import Pricing from "../Pricing/Pricing";
 //redux
 import { useDispatch } from "react-redux";
 
 const Home = () => {
 	const dispatch = useDispatch();
 	const movies = ["star Wars", "batman", "avengers", "lord of the rings"];
-	const shows = [
-		"Stranger Things",
-		"friends",
-		"south park",
-		"the big bang theory",
-		"the walking dead",
-	];
+	const shows = ["Stranger Things", "friends", "the walking dead"];
 	const randomMovie = Math.floor(Math.random() * movies.length);
 	const randomShow = Math.floor(Math.random() * shows.length);
 
@@ -30,6 +25,7 @@ const Home = () => {
 		<div>
 			<Hero />
 			<MovieListing />
+			<Pricing />
 		</div>
 	);
 };

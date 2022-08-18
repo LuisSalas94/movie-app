@@ -2,6 +2,12 @@
 
 * {
 	font-family: "Montserrat", sans-serif !important;
+	transition: all 0.2s linear;
+}
+
+*::selection {
+	background-color: #f44336;
+	color: #fff;
 }
 
 body {

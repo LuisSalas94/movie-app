@@ -7,6 +7,7 @@ import Home from "./components/Home/Home";
 import MovieDetail from "./components/MovieDetail/MovieDetail";
 import PageNotFound from "./components/PageNotFound/PageNotFound";
 import Favorites from "./components/Favorites/Favorites";
+import Pricing from "./components/Pricing/Pricing";
 
 function App() {
 	return (
@@ -14,7 +15,10 @@ function App() {
 			<BrowserRouter>
 				<Header />
 				<Routes>
-					<Route path="/" element={<Home />} />
+					{/* <Route path="/" element={<Home />} /> */}
+					<Route path="/" element={<Home />}>
+						<Route path="/pricing" element={<Pricing />} />
+					</Route>
 					<Route path="/movie/:imdbID" element={<MovieDetail />} />
 					<Route path="/favorites" element={<Favorites />} />
 					<Route path="*" element={<PageNotFound />} />
