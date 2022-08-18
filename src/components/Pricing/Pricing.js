@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Pricing.scss";
 import PricingCard from "../PricingCard/PricingCard";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Pricing = () => {
 	const priceContent = [
@@ -39,6 +41,10 @@ const Pricing = () => {
 		},
 	];
 
+	useEffect(() => {
+		Aos.init({ duration: 3000 });
+	}, []);
+
 	let renderCards = "";
 	renderCards = priceContent.map((item, index) => {
 		return <PricingCard key={index} {...item} />;
@@ -53,7 +59,9 @@ const Pricing = () => {
 					our content at low prices and according to your needs.{" "}
 				</p>
 			</div>
-			<div className="pricing-content">{renderCards}</div>
+			<div data-aos="fade-down-right" className="pricing-content">
+				{renderCards}
+			</div>
 		</div>
 	);
 };

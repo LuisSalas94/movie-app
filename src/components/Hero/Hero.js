@@ -1,15 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Hero.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faMedium } from "@fortawesome/free-brands-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { Link } from "react-router-dom";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Hero = () => {
+	useEffect(() => {
+		Aos.init({ duration: 3000 });
+	}, []);
+
 	return (
 		<>
-			<div className="hero-movie">
+			<div data-aos="fade-down-right" className="hero-movie">
 				<span className="hero-welcome">
 					Welcome
 					<div className="hero-line"></div>
@@ -36,7 +41,7 @@ const Hero = () => {
 					<button className="movie-btn left">Get Started</button>
 				</div>
 			</div>
-			<div className="side-icons">
+			<div data-aos="fade-down-right" className="side-icons">
 				<a
 					href="https://www.linkedin.com/in/luisfernandosalasgave/"
 					target={"_blank"}

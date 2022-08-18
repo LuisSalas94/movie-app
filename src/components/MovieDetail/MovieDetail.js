@@ -6,6 +6,8 @@ import { fetchAsyncmovieOrShow } from "../../features/movies/movieSlice";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faThumbsUp } from "@fortawesome/free-solid-svg-icons";
 import { faComment } from "@fortawesome/free-solid-svg-icons";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const MovieDetail = () => {
 	const { imdbID } = useParams();
@@ -16,11 +18,15 @@ const MovieDetail = () => {
 		dispatch(fetchAsyncmovieOrShow(imdbID));
 	}, [dispatch, imdbID]);
 
+	useEffect(() => {
+		Aos.init({ duration: 3000 });
+	}, []);
+
 	const randomLikes = Math.floor(Math.random() * 200) + 1;
 	const randomComments = Math.floor(Math.random() * 15) + 1;
 
 	return (
-		<div className="movie-detail">
+		<div data-aos="fade-down-right" className="movie-detail">
 			<div className="movie-image image-detail">
 				<img src={data.Poster} alt={data.Title} />
 			</div>

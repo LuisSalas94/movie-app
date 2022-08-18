@@ -1,17 +1,27 @@
-.movie-list{
-  h2{
-    margin-bottom: 10px;
-    font-weight: 400;
-    color: aliceblue;
-  }
-
-  .movie-container {
-   display: flex;
-   align-items: center;
-   flex-wrap: wrap;
-   padding: 60px 0;
-   justify-content: center;
-  
-    }
+.movie-list {
+	h2 {
+		margin-bottom: 10px;
+		font-weight: 400;
+		color: aliceblue;
+		text-align: center;
+		font-size: 3rem;
+		padding: 0 20px;
+	}
+	.movie-list-header {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		.movie-list-line {
+			width: 250px;
+			height: 0.8px;
+			background-color: aliceblue;
+		}
+	}
+	.movie-container {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		padding: 60px 0;
+		justify-content: center;
+	}
 }
-
