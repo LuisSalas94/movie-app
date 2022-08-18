@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faMedium } from "@fortawesome/free-brands-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faHackerrank } from "@fortawesome/free-brands-svg-icons";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
@@ -62,6 +63,13 @@ const Hero = () => {
 					rel="noreferrer"
 				>
 					<FontAwesomeIcon icon={faGithub} className="icon" />
+				</a>
+				<a
+					href="https://www.hackerrank.com/luisfernandosal2"
+					target={"_blank"}
+					rel="noreferrer"
+				>
+					<FontAwesomeIcon icon={faHackerrank} className="icon" />
 				</a>
 			</div>
 		</>

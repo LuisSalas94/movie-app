@@ -6,6 +6,7 @@ import { fetchAsyncShows } from "../../features/movies/movieSlice";
 import Hero from "../Hero/Hero";
 import MovieListing from "../MovieListing/MovieListing";
 import Pricing from "../Pricing/Pricing";
+import Footer from "../Footer/Footer";
 //redux
 import { useDispatch } from "react-redux";
 
@@ -26,6 +27,7 @@ const Home = () => {
 			<Hero />
 			<MovieListing />
 			<Pricing />
+			<Footer />
 		</div>
 	);
 };
