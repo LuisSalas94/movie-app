@@ -2,7 +2,6 @@ import { configureStore } from "@reduxjs/toolkit";
 import movieSlice from "./movies/movieSlice";
 import favoritesSlice from "./favorites/favoritesSlice";
 import {
-	persistStore,
 	persistReducer,
 	FLUSH,
 	REHYDRATE,

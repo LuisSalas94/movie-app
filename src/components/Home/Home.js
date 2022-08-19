@@ -20,7 +20,7 @@ const Home = () => {
 	useEffect(() => {
 		dispatch(fetchAsyncMovies(movies[randomMovie]));
 		dispatch(fetchAsyncShows(shows[randomShow]));
-	}, [dispatch, randomMovie, randomShow]);
+	}, [dispatch, movies, shows]);
 
 	return (
 		<div id="home">

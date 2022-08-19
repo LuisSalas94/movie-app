@@ -2,14 +2,7 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import "./Header.scss";
 import { Link, Outlet } from "react-router-dom";
-import {
-	Navbar,
-	Nav,
-	Form,
-	Button,
-	FormControl,
-	Container,
-} from "react-bootstrap";
+import { Navbar, Nav, Form, Button, Container } from "react-bootstrap";
 import {
 	fetchAsyncMovies,
 	fetchAsyncShows,
