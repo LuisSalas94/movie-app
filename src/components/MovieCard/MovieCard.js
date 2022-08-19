@@ -1,8 +1,6 @@
 import React from "react";
 import "./MovieCard.scss";
 import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
-import { useDispatch } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faThumbsUp } from "@fortawesome/free-solid-svg-icons";
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
@@ -10,23 +8,11 @@ import { faSave } from "@fortawesome/free-solid-svg-icons";
 import { faBookmark } from "@fortawesome/free-solid-svg-icons";
 import { faShareAlt } from "@fortawesome/free-solid-svg-icons";
 import { faComment } from "@fortawesome/free-solid-svg-icons";
+import { randomComments } from "../../common/comments-likes/randomComments";
+import { randomLikes } from "../../common/comments-likes/randomLikes";
 
 const MovieCard = (props) => {
 	const { data } = props;
-	const randomLikes = Math.floor(Math.random() * 200) + 1;
-	const randomComments = Math.floor(Math.random() * 15) + 1;
-	let renderInfo = "";
-	renderInfo = false ? (
-		<button className="button">
-			<i className="fa-solid fa-xmark"></i>
-			Remove
-		</button>
-	) : (
-		<Link to={`/movie/${data.imdbID}`} className="button">
-			<FontAwesomeIcon icon={faPlay} className="play-button" />
-			Details
-		</Link>
-	);
 
 	return (
 		<div className="movie">
@@ -48,7 +34,10 @@ const MovieCard = (props) => {
 					</div>
 				</div>
 				<div className="action">
-					{renderInfo}
+					<Link to={`/movie/${data.imdbID}`} className="button">
+						<FontAwesomeIcon icon={faPlay} className="play-button" />
+						Details
+					</Link>
 					<div className="actions-more">
 						<FontAwesomeIcon icon={faSave} className="icon" />
 						<FontAwesomeIcon icon={faBookmark} className="icon" />

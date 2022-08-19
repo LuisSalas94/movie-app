@@ -99,3 +99,9 @@
 .play-button {
 	margin-right: 8px;
 }
+
+@media screen and (max-width: 520px) {
+	.movie {
+		margin-top: 0.8rem;
+	}
+}

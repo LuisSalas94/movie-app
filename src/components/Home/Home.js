@@ -23,11 +23,11 @@ const Home = () => {
 	}, [dispatch, randomMovie, randomShow]);
 
 	return (
-		<div>
+		<div id="home">
 			<Hero />
 			<MovieListing />
-			<Pricing />
-			<Footer />
+			<Pricing id="pricing" />
+			<Footer id="footer" />
 		</div>
 	);
 };

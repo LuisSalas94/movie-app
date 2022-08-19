@@ -15,10 +15,8 @@ function App() {
 			<BrowserRouter>
 				<Header />
 				<Routes>
-					{/* <Route path="/" element={<Home />} /> */}
-					<Route path="/" element={<Home />}>
-						<Route path="/pricing" element={<Pricing />} />
-					</Route>
+					<Route path="/" element={<Home />} />
+					<Route path="pricing" element={<Pricing />} />
 					<Route path="/movie/:imdbID" element={<MovieDetail />} />
 					<Route path="/favorites" element={<Favorites />} />
 					<Route path="*" element={<PageNotFound />} />

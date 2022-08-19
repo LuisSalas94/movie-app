@@ -8,6 +8,8 @@ import { faBookmark } from "@fortawesome/free-solid-svg-icons";
 import { faShareAlt } from "@fortawesome/free-solid-svg-icons";
 import { faComment } from "@fortawesome/free-solid-svg-icons";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
+import { randomComments } from "../../common/comments-likes/randomComments";
+import { randomLikes } from "../../common/comments-likes/randomLikes";
 import { toast } from "react-toastify";
 import { removeFromFavorites } from "../../features/favorites/favoritesSlice";
 
@@ -15,9 +17,6 @@ const FavoriteCard = (props) => {
 	const { data } = props;
 	const id = data.imdbID;
 	const dispatch = useDispatch();
-
-	const randomLikes = Math.floor(Math.random() * 200) + 1;
-	const randomComments = Math.floor(Math.random() * 15) + 1;
 
 	const removeMovieOrShow = () => {
 		dispatch(removeFromFavorites(id));

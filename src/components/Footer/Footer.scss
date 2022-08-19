@@ -36,3 +36,11 @@
 		}
 	}
 }
+
+@media screen and (max-width: 520px) {
+	.footer-copyright {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+}

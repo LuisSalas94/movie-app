@@ -47,7 +47,7 @@
 .side-icons {
 	position: absolute;
 	top: 50%;
-	right: 0;
+	right: -3%;
 	rotate: -90deg;
 	.icon {
 		color: #f44336;
@@ -59,11 +59,7 @@
 
 @media screen and (max-width: 1200px) {
 	.side-icons {
-		position: relative;
-		right: -50%;
-		transform: translateX(-15%);
-		bottom: 0;
-		rotate: 0deg;
+		display: none;
 	}
 }
 
@@ -75,7 +71,7 @@
 		}
 	}
 	.hero-movie-buttons .left {
-		margin-left: 0 !important;
+		margin-left: 1rem !important;
 		margin-top: 1rem !important;
 	}
 }
@@ -112,6 +108,10 @@
 		.hero-line {
 			display: none;
 		}
+	}
+
+	.hero-movie-buttons .left {
+		margin-left: 0rem !important;
 	}
 
 	.side-icons {

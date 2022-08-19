@@ -31,13 +31,11 @@ const Footer = () => {
 							annual subscription, you can access over 150,000 free titles to
 							watch instantaneously. These include everything from classics to
 							recent releases. If you can’t find anything to watch, you can
-							download any movie rental imaginable for a set fee.
-						</p>
-						<p>
-							The one interesting aspect about MOVstremNow is its rental period.
-							Once you rent a movie, you’ll have 30 days to press Watch Now.
-							However, after pressing this button, you’ll only have 48 hours to
-							complete the title.
+							download any movie rental imaginable for a set fee. The one
+							interesting aspect about MOVstremNow is its rental period. Once
+							you rent a movie, you’ll have 30 days to press Watch Now. However,
+							after pressing this button, you’ll only have 48 hours to complete
+							the title.
 						</p>
 					</div>
 

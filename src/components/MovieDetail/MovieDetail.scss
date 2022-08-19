@@ -1,91 +1,93 @@
-.movie-detail{
-  width: 100%;
-  height: 100vh;
-  margin: 20px auto;
-  display: flex;
-  align-items: center;
-  padding: 0 10%;
-  background-color: #282B32;
-  .image-detail{
-    background-size: cover;
-    background-blend-mode: screen;
-    mask-image: linear-gradient(180deg, rgba(0, 0, 0, 1), transparent 100%);
-    height: fit-content;
-    text-align: center;
-  }
-  .movie-info{
-    padding-left: 2rem;
-    
-    .info{
-      color: #f44336;
-      font-size: 1.2rem;
-      letter-spacing: 2px;
-    }
-    .title, .genres{
-      color: aliceblue;
-    }
-    .movie-text{
-      p{
-        color: aliceblue;
-      }
-      .likes{
-        color: #f44336;
-        font-size: 0.8rem;
-        padding-bottom: 10px;
-        span{
-          margin-left: 5px;
-        }
-        .randon-button{
-          margin-right: 5px;
-        }
-      }
-    }
-    .detail-btn{
-      background-color: transparent;
-      border: none;
-      text-decoration: none;
-      border: 1px solid #f44336;
-      padding: 10px 15px;
-      color: #f44336;
-      transition: all .3s ease-in-out;
-      margin: 0 .4rem;
-      border-radius: 3px;
-      &:hover{
-        background-color: #f44336;
-        color: #fff;
-      }
-    }
-    .summary{
-      .text{
-        line-height: 1.9rem;
-        color: aliceblue;
-      }
-      .cast{
-        color: aliceblue;
-      }
-    }
-  }
-  .action{
-    padding-top: 10px;
-   }
+.movie-detail {
+	width: 100%;
+	height: 100vh;
+	margin: 20px auto;
+	display: flex;
+	align-items: center;
+	padding: 0 10%;
+	background-color: #282b32;
+	.image-detail {
+		background-size: cover;
+		background-blend-mode: screen;
+		mask-image: linear-gradient(180deg, rgba(0, 0, 0, 1), transparent 100%);
+		height: fit-content;
+		text-align: center;
+	}
+	.movie-info {
+		padding-left: 2rem;
+
+		.info {
+			color: #f44336;
+			font-size: 1.2rem;
+			letter-spacing: 2px;
+		}
+		.title,
+		.genres {
+			color: aliceblue;
+		}
+		.movie-text {
+			p {
+				color: aliceblue;
+			}
+			.likes {
+				color: #f44336;
+				font-size: 0.8rem;
+				padding-bottom: 10px;
+				span {
+					margin-left: 5px;
+				}
+				.randon-button {
+					margin-right: 5px;
+				}
+			}
+		}
+		.detail-btn {
+			background-color: transparent;
+			border: none;
+			text-decoration: none;
+			border: 1px solid #f44336;
+			padding: 10px 15px;
+			color: #f44336;
+			transition: all 0.3s ease-in-out;
+			margin: 0 0.4rem;
+			border-radius: 3px;
+			&:hover {
+				background-color: #f44336;
+				color: #fff;
+			}
+		}
+		.summary {
+			.text {
+				line-height: 1.9rem;
+				color: aliceblue;
+			}
+			.cast {
+				color: aliceblue;
+			}
+		}
+	}
+	.action {
+		padding-top: 10px;
+		.randon-button {
+			margin-right: 8px;
+		}
+	}
 }
 
 @media screen and (max-width: 1020px) {
-  .movie-detail {
-    flex-wrap: wrap;
-    padding: 0 5%;
-      
-  }
-
+	.movie-detail {
+		flex-wrap: wrap;
+		padding: 0 5%;
+	}
 }
 
 @media screen and (max-width: 576px) {
-  .movie-detail{
-    justify-content: center;
-  }
-  .actions-more {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+	.movie-detail {
+		justify-content: center;
+	}
+	.actions-more {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
 }
