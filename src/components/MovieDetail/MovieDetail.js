@@ -6,6 +6,8 @@ import { fetchAsyncmovieOrShow } from "../../features/movies/movieSlice";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faThumbsUp } from "@fortawesome/free-solid-svg-icons";
 import { faComment } from "@fortawesome/free-solid-svg-icons";
+import { addToFavorites } from "../../features/favorites/favoritesSlice";
+import { toast } from "react-toastify";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
@@ -21,6 +23,12 @@ const MovieDetail = () => {
 	useEffect(() => {
 		Aos.init({ duration: 3000 });
 	}, []);
+
+	//Add to favorites
+	const addMovieOrShowToFavorites = () => {
+		dispatch(addToFavorites(data));
+		toast.success(`${data.Title} was added to favorites`);
+	};
 
 	const randomLikes = Math.floor(Math.random() * 200) + 1;
 	const randomComments = Math.floor(Math.random() * 15) + 1;
@@ -71,7 +79,11 @@ const MovieDetail = () => {
 							Go Back
 						</Link>
 
-						<Link to="/favorites" className="detail-btn">
+						<Link
+							to="/favorites"
+							className="detail-btn"
+							onClick={addMovieOrShowToFavorites}
+						>
 							Add to favorites
 						</Link>
 					</div>
