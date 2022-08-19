@@ -48,7 +48,7 @@ $ npm start # or yarn start
 
 ## Live Demo
 
-[Live Demo Link]()
+[Live Demo Link](https://luissalas94.github.io/movie-app/)
 
 
 
