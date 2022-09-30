@@ -16,6 +16,12 @@ Users can search for movies and tv shows. The application is built with React an
 - Redux-Persist
 - React-Bootstrap
 - React-Toastify
+
+## Full Screen Views
+<img src="src/images/img1.png" alt="Full Screen View" />
+<img src="src/images/img2.png" alt="Full Screen View" />
+<img src="src/images/img3.png" alt="Full Screen View" />
+<img src="src/images/img4.png" alt="Full Screen View" />
   
 ## Learning objectives
 - Use React documentation.
@@ -29,12 +35,12 @@ Users can search for movies and tv shows. The application is built with React an
 - Apply React best practices and language style guides in code.
 - Use store, actions and reducers in React.
 
-
 ## Instructions
 
 First clone this repository.
 ```bash
 $ git clone https://github.com/LuisSalas94/movie-app
+```
 
 Install dependencies. Make sure you already have [`nodejs`](https://nodejs.org/en/) & [`npm`](https://www.npmjs.com/) installed in your system.
 ```bash
@@ -44,6 +50,7 @@ $ npm install # or yarn
 Run it
 ```bash
 $ npm start # or yarn start
+```
 ```
 
 ## Live Demo
